@@ -7,5 +7,6 @@ RUN apt update && \
   curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add - && \
   apt-get update && \
   apt-get install -y google-cloud-sdk kubectl && \
-  ln -s /usr /google-cloud-sdk && \ # hack for old builds, FIXME
-  ln -s /usr/bin/kubectl /bin # hack for old builds, FIXME
+  ln -s /usr /google-cloud-sdk && \
+  ln -s /usr/bin/kubectl /bin
+ # ln's are hack for old builds, FIXME
