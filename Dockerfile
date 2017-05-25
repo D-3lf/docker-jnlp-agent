@@ -7,6 +7,8 @@ RUN apt update && \
   curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add - && \
   apt-get update && \
   apt-get install -y google-cloud-sdk kubectl && \
+  groupadd -g 999 ubdocker && \
+  usermod -a -G ubdocker jenkins && \
   ln -s /usr /google-cloud-sdk && \
   ln -s /usr/bin/kubectl /bin
  # ln's are hack for old builds, FIXME
