@@ -10,5 +10,10 @@ RUN apt update && \
   groupadd -g 999 ubdocker && \
   usermod -a -G ubdocker jenkins && \
   ln -s /usr /google-cloud-sdk && \
-  ln -s /usr/bin/kubectl /bin
+  ln -s /usr/bin/kubectl /bin && \
+  apt-get install -y apt-transport-https ca-certificates curl software-properties-common && \
+  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add - && \
+  add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable" && \
+  apt-get update && \
+  apt-get install -y docker-ce && \
  # ln's are hack for old builds, FIXME
