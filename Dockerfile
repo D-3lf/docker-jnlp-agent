@@ -15,5 +15,5 @@ RUN apt update && \
   add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable" && \
   apt-get update && \
   apt-get install -y docker-ce python python-pip && \
-  pip install --upgrade --user awsebcli
+  pip install --upgrade awsebcli
  # ln's are hack for old builds, FIXME
