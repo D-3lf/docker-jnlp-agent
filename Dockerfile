@@ -1,4 +1,4 @@
-FROM jenkinsci/jnlp-slave:latest
+FROM jenkins/jnlp-slave:latest
 
 USER root
 RUN apt update && \
