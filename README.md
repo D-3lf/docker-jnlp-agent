@@ -1,4 +1,4 @@
-# todd/jnlp-agent-gcloud 
+## jnlp-agent-gcloud 
 
 JNLP Agent Docker image based on jenkins/jnlp-slave:latest with the gcloud
 SDK added.
